@@ -1,0 +1,16 @@
+type Picture {
+  id: ID!
+  url: String!
+  userId: String!
+}
+
+type Query {
+  getAllMyUploadedPictures: [Picture!]!
+}
+
+type Mutation {
+  uploadPicture(file: Upload!): String!
+  deletePicture(key: String!): Boolean!
+}
+
+scalar Upload
